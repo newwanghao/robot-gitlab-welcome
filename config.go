@@ -67,6 +67,18 @@ type botConfig struct {
 	// Branch is used to read file path
 	Branch string `json:"branch" required:"true"`
 
+	// FilePath is the path-owner-map file path
+	FilePath string `json:"file_path,omitempty"`
+
+	// FileBranch is used to located FilePath
+	FileBranch string `json:"file_branch,omitempty"`
+
+	// NeedAssign decides assign maintainers to PR or not
+	NeedAssign bool `json:"need_assign,omitempty"`
+
+	// WelcomeSimpler means to make the welcome message simpler when PR is opened
+	WelcomeSimpler bool `json:"welcome_simpler,omitempty"`
+
 	// Path is used to read file path
 	Path string `json:"path" required:"true"`
 
